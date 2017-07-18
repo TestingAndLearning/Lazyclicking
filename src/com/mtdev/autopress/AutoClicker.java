@@ -22,8 +22,8 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
 
-
-public class AutoClicker extends JFrame implements ActionListener {
+public class AutoClicker extends JFrame implements ActionListener
+{
 
 	/**
 	 * 
@@ -39,14 +39,19 @@ public class AutoClicker extends JFrame implements ActionListener {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args)
+	{
+		EventQueue.invokeLater(new Runnable()
+		{
+			public void run()
+			{
+				try
+				{
 					AutoClicker frame = new AutoClicker();
 					frame.setVisible(true);
-					frame.setLocationRelativeTo( null );
-				} catch (Exception e) {
+					frame.setLocationRelativeTo(null);
+				} catch (Exception e)
+				{
 					e.printStackTrace();
 				}
 			}
@@ -56,7 +61,8 @@ public class AutoClicker extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
-	public AutoClicker() {
+	public AutoClicker()
+	{
 		setUndecorated(true);
 		setTitle("Auto Clicker v1.0");
 		setResizable(false);
@@ -68,8 +74,7 @@ public class AutoClicker extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 
 		JPanel panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Settings", TitledBorder.LEADING, 
-				TitledBorder.TOP, null, null));
+		panel.setBorder(new TitledBorder(null, "Settings", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		panel.setBounds(10, 11, 168, 86);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -94,18 +99,18 @@ public class AutoClicker extends JFrame implements ActionListener {
 		panel.add(txtInterval);
 
 		btnStart = new JButton("Start");
-		btnStart.addActionListener( this );
-		btnStart.setActionCommand( "Start" );
+		btnStart.addActionListener(this);
+		btnStart.setActionCommand("Start");
 		btnStart.setBounds(188, 16, 89, 23);
 		contentPane.add(btnStart);
-		
+
 		progressBar = new JProgressBar();
 		progressBar.setString("Please wait...");
 		progressBar.setStringPainted(true);
 		progressBar.setBounds(187, 77, 90, 19);
-		setProgressState( true );
+		setProgressState(true);
 		contentPane.add(progressBar);
-		
+
 		lblByTabs = new JLabel("-Tabs5894");
 		lblByTabs.setForeground(Color.GRAY);
 		lblByTabs.setFont(new Font("Tahoma", Font.PLAIN, 8));
@@ -113,39 +118,46 @@ public class AutoClicker extends JFrame implements ActionListener {
 		lblByTabs.setBounds(188, 83, 89, 14);
 		contentPane.add(lblByTabs);
 	}
-	
-	void setProgressState( final boolean done ) {
-		SwingUtilities.invokeLater( new Runnable() {
-			
+
+	void setProgressState(final boolean done)
+	{
+		SwingUtilities.invokeLater(new Runnable()
+		{
+
 			@Override
-			public void run() {
-				progressBar.setVisible( !done );
-				progressBar.setIndeterminate( !done );
-				
-				btnStart.setEnabled( done );
-				txtInterval.setEditable( done );
-				txtN.setEditable( done );
+			public void run()
+			{
+				progressBar.setVisible(!done);
+				progressBar.setIndeterminate(!done);
+
+				btnStart.setEnabled(done);
+				txtInterval.setEditable(done);
+				txtN.setEditable(done);
 			}
 		});
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent evt) {
-		if( evt.getActionCommand().equals( "Start" ) ) {
-			try {
-				StartClick click = new StartClick( AutoClicker.this,
-						Integer.parseInt( "0" + txtN.getText().trim()),
-						Integer.parseInt( "0" + txtInterval.getText().trim() ));
-				
-				JOptionPane.showMessageDialog( null, "Auto Click will start in 3sec.", "Warning", JOptionPane.WARNING_MESSAGE );
+	public void actionPerformed(ActionEvent evt)
+	{
+		if (evt.getActionCommand().equals("Start"))
+		{
+			try
+			{
+				StartClick click = new StartClick(AutoClicker.this, Integer.parseInt("0" + txtN.getText().trim()),
+						Integer.parseInt("0" + txtInterval.getText().trim()));
+
+				JOptionPane.showMessageDialog(null, "Auto Click will start in 3sec.", "Warning",
+						JOptionPane.WARNING_MESSAGE);
 				ExecutorService executor = Executors.newCachedThreadPool();
-				executor.execute( click );
-			} catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog( null, "Invalid Input!", "Error", JOptionPane.ERROR_MESSAGE );
+				executor.execute(click);
+			} catch (NumberFormatException e)
+			{
+				JOptionPane.showMessageDialog(null, "Invalid Input!", "Error", JOptionPane.ERROR_MESSAGE);
 			}
-		}
-		else {
-			System.out.println( "Clicked!" );
+		} else
+		{
+			System.out.println("Clicked!");
 		}
 	}
 }
