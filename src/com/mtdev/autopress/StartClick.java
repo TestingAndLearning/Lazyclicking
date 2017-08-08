@@ -50,11 +50,11 @@ public class StartClick implements Runnable
 			for (int i=0; i < nClick; i++)
 			{
 					  Random randomGenerator = new Random();
-					  int randomInt1 = randomGenerator.nextInt(480000);
+					  int randomInt1 = randomGenerator.nextInt(370000);
 					  
 					  if (randomInt1 < 240000)
 					  {
-						  randomInt1 += 200000;
+						  randomInt1 += 150000;
 					  }
 					  
 					  Random randomGenerator2 = new Random();
@@ -68,64 +68,94 @@ public class StartClick implements Runnable
 				        switch (randomInt2) 
 				        {
 			            case 0:  robot.keyPress(KeyEvent.VK_1);
+			            		 robot.keyRelease(KeyEvent.VK_1);
 	                     		 break;
 				        case 1:  robot.keyPress(KeyEvent.VK_A);
+				        		 robot.keyRelease(KeyEvent.VK_A);
 			                     break;
 			            case 2:  robot.keyPress(KeyEvent.VK_B);
+			            		 robot.keyRelease(KeyEvent.VK_B);
 			                     break;
 			            case 3:  robot.keyPress(KeyEvent.VK_C);
+		        		 		 robot.keyRelease(KeyEvent.VK_C);
 			                     break;
 			            case 4:  robot.keyPress(KeyEvent.VK_D);
+		        		 		 robot.keyRelease(KeyEvent.VK_D);
 			                     break;
 			            case 5:  robot.keyPress(KeyEvent.VK_E);
+		        		 		 robot.keyRelease(KeyEvent.VK_E);
 			                     break;
 			            case 6:  robot.keyPress(KeyEvent.VK_F);
+		        		 		 robot.keyRelease(KeyEvent.VK_F);
 			                     break;
 			            case 7:  robot.keyPress(KeyEvent.VK_G);
+		        		 		 robot.keyRelease(KeyEvent.VK_G);
 			                     break;
 			            case 8:  robot.keyPress(KeyEvent.VK_H);
+			            	 	 robot.keyRelease(KeyEvent.VK_H);
 			                     break;
 			            case 9:  robot.keyPress(KeyEvent.VK_I);
+		        		 		 robot.keyRelease(KeyEvent.VK_I);
 			                     break;
 			            case 10: robot.keyPress(KeyEvent.VK_J);
+		        		 		 robot.keyRelease(KeyEvent.VK_J);
 			                     break;
 			            case 11: robot.keyPress(KeyEvent.VK_K);
+		        		 		 robot.keyRelease(KeyEvent.VK_K);
 			                     break;
 			            case 12: robot.keyPress(KeyEvent.VK_L);
+		        		 		 robot.keyRelease(KeyEvent.VK_L);
 			                     break;
 			            case 13: robot.keyPress(KeyEvent.VK_M);
+		        		 		 robot.keyRelease(KeyEvent.VK_M);
 	                     		 break;
 			            case 14: robot.keyPress(KeyEvent.VK_N);
+		        		 		 robot.keyRelease(KeyEvent.VK_N);
 			                     break;
 			            case 15: robot.keyPress(KeyEvent.VK_O);
+		        		 		 robot.keyRelease(KeyEvent.VK_O);
 			                     break;
 			            case 16: robot.keyPress(KeyEvent.VK_P);
+		        		 		 robot.keyRelease(KeyEvent.VK_P);
 			                     break;
 			            case 17: robot.keyPress(KeyEvent.VK_Q);
+		        				 robot.keyRelease(KeyEvent.VK_Q);
 			                     break;
 			            case 18: robot.keyPress(KeyEvent.VK_R);
+		        		 		 robot.keyRelease(KeyEvent.VK_R);
 			                     break;
 			            case 19: robot.keyPress(KeyEvent.VK_S);
+		        		 		 robot.keyRelease(KeyEvent.VK_S);
 			                     break;
 			            case 20: robot.keyPress(KeyEvent.VK_T);
+		        		 		 robot.keyRelease(KeyEvent.VK_T);
 			                     break;
 			            case 21: robot.keyPress(KeyEvent.VK_U);
+		        		 		 robot.keyRelease(KeyEvent.VK_U);
 			                     break;
 			            case 22: robot.keyPress(KeyEvent.VK_V);
+		        		 		 robot.keyRelease(KeyEvent.VK_V);
 			                     break;
 			            case 23: robot.keyPress(KeyEvent.VK_W);
+		        		 		 robot.keyRelease(KeyEvent.VK_W);
 			                     break;
 			            case 24: robot.keyPress(KeyEvent.VK_X);
+		        		 		 robot.keyRelease(KeyEvent.VK_X);
 			                     break;
 			            case 25: robot.keyPress(KeyEvent.VK_Y);
+		        		 		 robot.keyRelease(KeyEvent.VK_Y);
 	                     		 break;
 			            case 26: robot.keyPress(KeyEvent.VK_Z);
+		        		 		 robot.keyRelease(KeyEvent.VK_Z);
 	                     		 break;
 			            case 27: robot.keyPress(KeyEvent.VK_BACK_SPACE);
+		        		 		 robot.keyRelease(KeyEvent.VK_BACK_SPACE);
                 		 		 break;
 			            case 28: robot.keyPress(KeyEvent.VK_BACK_SPACE);
+			            		 robot.keyRelease(KeyEvent.VK_BACK_SPACE);
                 		 		 break;
 			            default: robot.keyPress(KeyEvent.VK_0);
+			            		 robot.keyRelease(KeyEvent.VK_0);
 			                     break;
 				        }
 				        
