@@ -1,4 +1,4 @@
-package com.mtdev.autopress;
+package com.mtdev.autonmz;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
