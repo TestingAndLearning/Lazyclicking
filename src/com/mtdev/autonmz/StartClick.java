@@ -34,6 +34,8 @@ public class StartClick implements Runnable
 	1350 510
 	*/
 	
+	//Pray button center determines where the inv slots are going to be. Select that from getting coords, or just fullscreen and find the static position and hard code it to that. 
+	
 	//Pray button. 
 	int pb[] = {1202,233};
 	//First slot. 
@@ -97,37 +99,7 @@ public class StartClick implements Runnable
 			int fromX = (int) currentPos.getX();
 			int fromY = (int) currentPos.getY();
 
-			for(int i=0;i<invA.length;i++)
-			{
-				
-				for(int j=0;j<invA[0].length;j++)
-				{
-					System.out.print("{ ");
-					for(int k=0;k<invA[0][1].length;k++)
-					{
-						System.out.print(invA[i][j][k]+" ");
-					}
-					System.out.print("} ");
-				}
-				System.out.println(" ");
-			}
-			
-			System.out.println(" ");
-			
-			for(int i=0;i<invO.length;i++)
-			{
-				
-				for(int j=0;j<invO[0].length;j++)
-				{
-					System.out.print("{ ");
-					for(int k=0;k<invO[0][1].length;k++)
-					{
-						System.out.print(invO[i][j][k]+" ");
-					}
-					System.out.print("} ");
-				}
-				System.out.println(" ");
-			}
+
 			
 			//GlideMouse(fromX, fromY, 1000, 500, 1000, 1000);
 
@@ -139,7 +111,7 @@ public class StartClick implements Runnable
 		}
 	}
 
-	public void GlideMouse(int x1, int y1, int x2, int y2, int t, int n)
+	private void GlideMouse(int x1, int y1, int x2, int y2, int t, int n)
 	{
 		try
 		{
@@ -156,5 +128,59 @@ public class StartClick implements Runnable
 			e.printStackTrace();
 		}
 	}
+	
+	private void PrintCoords()
+	{
+		for(int i=0;i<invA.length;i++)
+		{
+			
+			for(int j=0;j<invA[0].length;j++)
+			{
+				System.out.print("{ ");
+				for(int k=0;k<invA[0][1].length;k++)
+				{
+					System.out.print(invA[i][j][k]+" ");
+				}
+				System.out.print("} ");
+			}
+			System.out.println(" ");
+		}
+		
+		System.out.println(" ");
+		
+		for(int i=0;i<invO.length;i++)
+		{
+			
+			for(int j=0;j<invO[0].length;j++)
+			{
+				System.out.print("{ ");
+				for(int k=0;k<invO[0][1].length;k++)
+				{
+					System.out.print(invO[i][j][k]+" ");
+				}
+				System.out.print("} ");
+			}
+			System.out.println(" ");
+		}
+	}
+	
+	private void CheckHealth()
+	{
+		
+	}
 
+	private void DrinkAbsorb()
+	{
+		
+	}
+	
+	private void DrinkOverload()
+	{
+		
+	}
+	
+	private void FlickPray()
+	{
+		
+	}
 }
